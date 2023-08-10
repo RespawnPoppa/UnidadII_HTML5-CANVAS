@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            background-color: white;
+            border-color: black;
+            border-style:solid;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Jose Manuel Benitez Perez 
+    Ingeniero en Desarrollo de Software
+    Programación Avanzada Internet
+    Semestre VII, T.V
+    -->
+    <canvas id="myCanvas" width="700" height="700"></canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas")
+        var ctx = canvas.getContext('2d')
+        //Cuadrado I
+        ctx.fillStyle = "#7d88e5"
+        ctx.fillRect(20,20,80,80)
+        //Cuadrado II
+        ctx.fillStyle = '#cd0009'
+        ctx.fillRect(85,85,80,80)
+        //Cuadrado III
+        ctx.fillStyle = "rgba(255, 150, 255, 0.5)"
+        ctx.fillRect(150,150,80,80)
+        
+        
+        // ctx.beginPath();
+        // ctx.moveTo(222,40) //Posicion de lapiz
+        // ctx.lineTo(260,80)
+        // ctx.lineTo(180,40)
+        
+        // ctx.closePath();
+        // ctx.fillStyle = 'red'; // Color rojo
+        // ctx.fill(); 
+
+    </script>
+</body>
+</html>

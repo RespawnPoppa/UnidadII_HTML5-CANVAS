@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>moveTo,lineTo y stroke</title>
+    <style>
+        canvas{
+            background-color: white;
+            border-color: black;
+            border-style:solid;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Jos -->
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+<script>
+    var canvas = document.getElementById("myCanvas")
+    var ctx = canvas.getContext('2d')
+
+    //Trazado
+    ctx.beginPath();
+    ctx.moveTo(140,40);
+    ctx.lineTo(300,200);
+    ctx.stroke();
+    ctx.strokeStyle = "black"
+
+    //Figura
+    ctx.beginPath();
+    ctx.fillStyle = '#ff96ff'
+    ctx.lineTo(400,300)
+    ctx.lineTo(400,300)
+    ctx.lineTo(300,280)
+    ctx.lineTo(260,180)
+    ctx.moveTo(300,500)
+    ctx.fill();
+    
+
+
+</script>
+
+</body>
+</html>
