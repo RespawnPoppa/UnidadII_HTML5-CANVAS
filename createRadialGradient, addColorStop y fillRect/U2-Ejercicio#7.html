@@ -32,19 +32,26 @@
         ctx.fillRect(85,85,80,80)
         //Cuadrado III
         ctx.fillStyle = "rgba(255, 150, 255, 0.5)"
-        ctx.fillRect(150,150,80,80)
-        
-        
-        // ctx.beginPath();
-        // ctx.moveTo(222,40) //Posicion de lapiz
-        // ctx.lineTo(260,80)
-        // ctx.lineTo(180,40)
-        
-        // ctx.closePath();
-        // ctx.fillStyle = 'red'; // Color rojo
-        // ctx.fill(); 
+        ctx.fillRect(150,150,80,80) 
 
-        
-    </script>
+
+        var gradient = ctx.createRadialGradient(
+        canvas.width / 2, canvas.height / 2, 0,
+        canvas.width / 2, canvas.height / 2, canvas.width / 2
+    );
+
+gradient.addColorStop(0, "red");        
+gradient.addColorStop(0.25, "orange");  
+gradient.addColorStop(0.5, "yellow");   
+gradient.addColorStop(0.75, "green");   
+gradient.addColorStop(1, "blue");       
+
+ctx.fillStyle = gradient;
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+</script>
 </body>
 </html>
+
+
+

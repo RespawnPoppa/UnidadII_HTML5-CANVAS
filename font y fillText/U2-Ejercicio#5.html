@@ -44,7 +44,27 @@
         // ctx.fillStyle = 'red'; // Color rojo
         // ctx.fill(); 
 
-        
-    </script>
+        //Circulo I
+    ctx.beginPath();
+    ctx.arc(460, 400, 120, 3 , 5 * Math.PI);
+    ctx.fillStyle = "#ffaa18"
+    ctx.fill();
+    ctx.stroke();
+    //Circulo II
+    ctx.beginPath();
+    ctx.arc(310, 400, 120, 3 , 5 * Math.PI);
+    ctx.fillStyle = "#ff0018"
+    ctx.fill();
+    ctx.stroke();
+    
+var gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+gradient.addColorStop(0, "white");  
+gradient.addColorStop(1, "transparent"); 
+
+ctx.fillStyle = gradient;
+ 
+ctx.font = "65px Impact";
+ctx.fillText("MasterCard", 245, 420);
+</script>
 </body>
 </html>

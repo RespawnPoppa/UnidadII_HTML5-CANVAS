@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            background-color: white;
+            border-color: black;
+            border-style:solid;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Jose Manuel Benitez Perez 
+    Ingeniero en Desarrollo de Software
+    Programación Avanzada Internet
+    Semestre VII, T.V
+    -->
+    <canvas id="myCanvas" width="700" height="700"></canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas")
+        var ctx = canvas.getContext('2d')
+        //Cuadrado I
+        ctx.fillStyle = "#7d88e5"
+        ctx.fillRect(20,20,80,80)
+        //Cuadrado II
+        ctx.fillStyle = '#cd0009'
+        ctx.fillRect(85,85,80,80)
+        //Cuadrado III
+        ctx.fillStyle = "rgba(255, 150, 255, 0.5)"
+        ctx.fillRect(150,150,80,80)
+        
+        
+        // ctx.beginPath();
+        // ctx.moveTo(222,40) //Posicion de lapiz
+        // ctx.lineTo(260,80)
+        // ctx.lineTo(180,40)
+        
+        // ctx.closePath();
+        // ctx.fillStyle = 'red'; // Color rojo
+        // ctx.fill(); 
+
+        //Circulo I
+    ctx.beginPath();
+    ctx.arc(100, 400, 85, 3 , 5 * Math.PI);
+    ctx.fillStyle = "#ff0018"
+    ctx.fill();
+    ctx.stroke();
+    //Circulo II
+    ctx.beginPath();
+    ctx.arc(200, 400, 85, 3 , 5 * Math.PI);
+    ctx.fillStyle = "#ffaa18"
+    ctx.fill();
+    ctx.stroke();
+    //Circulo III
+    ctx.beginPath();
+    ctx.arc(600, 500, 65, 3 , 5 * Math.PI);
+    ctx.fillStyle = "#AFAEAD"
+    ctx.fill();
+    ctx.stroke();
+        //Circulo IV
+    ctx.beginPath();
+    ctx.arc(600, 500, 65, 3 , 5 * Math.PI);
+    ctx.fillStyle = "#AFAEAD"
+    ctx.fill();
+    ctx.stroke();
+    
+    //Circulo V
+    ctx.beginPath();
+    ctx.arc(600, 430, 65, 3 , 5 * Math.PI);
+    ctx.fillStyle = "blue"
+    ctx.fill();
+    ctx.stroke();
+    //Circulo VI
+    ctx.beginPath();
+    ctx.arc(43, 143, 35, 3 , 5 * Math.PI);
+    ctx.fillStyle = "blue"
+    ctx.fill();
+    ctx.stroke();
+    //Circulo VII
+    ctx.beginPath();
+    ctx.arc(450,45, 65, 3 , 5 * Math.PI);
+    ctx.fillStyle = "blue"
+    ctx.fill();
+    ctx.stroke();
+    //Circulo VIII
+    ctx.beginPath();
+    ctx.arc(222,235, 65, 3 , 5 * Math.PI);
+    ctx.fillStyle = "blue"
+    ctx.fill();
+    ctx.stroke();
+    //Circulo IX
+    ctx.beginPath();
+    ctx.arc(222,550, 65, 3 , 5 * Math.PI);
+    ctx.fillStyle = "blue"
+    ctx.fill();
+    ctx.stroke();
+        //Circulo X
+    ctx.beginPath();
+    ctx.arc(21,300, 65, 3 , 5 * Math.PI);
+    ctx.fillStyle = "blue"
+    ctx.fill();
+    ctx.stroke();
+    </script>
+</body>
+</html>

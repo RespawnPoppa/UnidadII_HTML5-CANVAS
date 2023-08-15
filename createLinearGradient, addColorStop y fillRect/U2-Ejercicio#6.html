@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            background-color: white;
+            border-color: black;
+            border-style:solid;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Jose Manuel Benitez Perez 
+    Ingeniero en Desarrollo de Software
+    Programación Avanzada Internet
+    Semestre VII, T.V
+    -->
+    <canvas id="myCanvas" width="700" height="700"></canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas")
+        var ctx = canvas.getContext('2d')
+        //Cuadrado I
+        ctx.fillStyle = "#7d88e5"
+        ctx.fillRect(20,20,80,80)
+        //Cuadrado II
+        ctx.fillStyle = '#cd0009'
+        ctx.fillRect(85,85,80,80)
+        //Cuadrado III
+        ctx.fillStyle = "rgba(255, 150, 255, 0.5)"
+        ctx.fillRect(150,150,80,80)
+        
+        
+        // ctx.beginPath();
+        // ctx.moveTo(222,40) //Posicion de lapiz
+        // ctx.lineTo(260,80)
+        // ctx.lineTo(180,40)
+        
+        // ctx.closePath();
+        // ctx.fillStyle = 'red'; // Color rojo
+        // ctx.fill(); 
+
+        //Circulo I
+    ctx.beginPath();
+    ctx.arc(460, 400, 120, 3 , 5 * Math.PI);
+    ctx.fillStyle = "#ffaa18"
+    ctx.fill();
+    ctx.stroke();
+    //Circulo II
+    ctx.beginPath();
+    ctx.arc(310, 400, 120, 3 , 5 * Math.PI);
+    ctx.fillStyle = "#ff0018"
+    ctx.fill();
+    ctx.stroke();
+    
+var gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+gradient.addColorStop(0, "white");  
+gradient.addColorStop(1, "transparent"); 
+
+ctx.fillStyle = gradient;
+ 
+ctx.font = "65px Impact";
+ctx.fillText("MasterCard", 245, 420);
+
+
+var rainbowGradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+rainbowGradient.addColorStop(0, "red");  
+rainbowGradient.addColorStop(1/6, "orange"); 
+rainbowGradient.addColorStop(2/6, "yellow"); 
+rainbowGradient.addColorStop(3/6, "green");  
+rainbowGradient.addColorStop(4/6, "blue");   
+rainbowGradient.addColorStop(5/6, "indigo"); 
+rainbowGradient.addColorStop(1, "violet");   
+
+ctx.beginPath();
+ctx.arc(canvas.width / 2, canvas.height / 3, 100, 0, 2 * Math.PI);
+ctx.fillStyle = rainbowGradient;
+ctx.fill();
+
+ctx.beginPath();
+ctx.fillRect(canvas.width / 4, canvas.height * 2 / 3, canvas.width / 2, 100);
+ctx.fillStyle = rainbowGradient;
+ctx.fill();
+
+</script>
+</body>
+</html>
+
+
+

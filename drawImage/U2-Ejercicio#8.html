@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            background-color: greenyellow;
+            border-color: black;
+            border-style:solid;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Jose Manuel Benitez Perez 
+    Ingeniero en Desarrollo de Software
+    Programación Avanzada Internet
+    Semestre VII, T.V
+    -->
+    <canvas id="myCanvas" width="700" height="700"></canvas>
+
+    <img src="/drawImage/peluquero.png" id="peluquero" style="display: none;" alt="" >
+    <img src="/drawImage/abeja.png" id="imagenII" style="display: none;" alt="" >
+    <img src="/drawImage/frape.png" id="imagenIII" style="display: none;" alt="" >
+
+    <script>
+        var canvas = document.getElementById("myCanvas")
+        var ctx = canvas.getContext('2d')
+        //Cuadrado I
+        ctx.fillStyle = "#7d88e5"
+        ctx.fillRect(20,20,80,80)
+        //Cuadrado II
+        ctx.fillStyle = '#cd0009'
+        ctx.fillRect(85,85,80,80)
+        //Cuadrado III
+        ctx.fillStyle = "rgba(255, 150, 255, 0.5)"
+        ctx.fillRect(150,150,80,80) 
+
+    // var imagen = document.getElementById("peluquero")
+        var imagen = new Image();
+         imagen.src = "peluquero.png";
+
+         imagen.onload = function() {
+         ctx.drawImage(imagen, 0, 250, 160, 160);
+        };
+
+        var ImagenII = new Image();
+        imagenII.src = "abeja.png";
+
+        imagenII.onload = function() {
+        ctx.drawImage(imagenII, 250, 250, 130, 130);
+        };
+
+        var ImagenIII = new Image();
+        imagenIII.src = "frape.png";
+
+        imagenIII.onload = function() {
+        ctx.drawImage(imagenIII, 360, 250, 200, 200);
+        };
+
+
+</script>
+</body>
+</html>
+
