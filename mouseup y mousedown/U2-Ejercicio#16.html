@@ -32,10 +32,11 @@
   var isDrawing = false; 
   var fig = true; 
   var circleColor = "#FF5733"; 
+  var squareColor = "#000000"; 
 
   canvas.addEventListener("mousedown", function(e) {
     isDrawing = true;
-    ctx.fillStyle = fig ? circleColor : getRandomColor();
+    ctx.fillStyle = fig ? circleColor : squareColor;
     if (fig) {
       ctx.beginPath();
       ctx.arc(e.layerX, e.layerY, 25, 0, 2 * Math.PI);
@@ -68,6 +69,7 @@
 
   canvas.addEventListener("mouseover", function() {
     circleColor = getRandomColor();
+    squareColor = circleColor; 
   });
 
   canvas.addEventListener("mouseout", function() {

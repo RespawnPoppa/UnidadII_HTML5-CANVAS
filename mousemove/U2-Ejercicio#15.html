@@ -31,9 +31,10 @@
         var ctx = canvas.getContext('2d')
         var fig = true;
        var circleColor = "#FF5733"; 
+       var squareColor = "#000000"; 
 
   canvas.addEventListener("mousedown", (e) => {
-    ctx.fillStyle = fig ? circleColor : getRandomColor();
+    ctx.fillStyle = fig ? circleColor : squareColor;
     if (fig) {
       ctx.beginPath();
       ctx.arc(e.layerX, e.layerY, 25, 0, 2 * Math.PI);
@@ -48,6 +49,7 @@
 
   canvas.addEventListener("mouseover", (e) => {
     circleColor = getRandomColor();
+    squareColor = circleColor; 
     console.log(e)
     console.log("mouseover")
   });
@@ -66,7 +68,7 @@
     }
     return color;
   }
-  
+
   canvas.addEventListener("mousemove", (event) => {
             ctx.beginPath();
                 ctx.fillStyle = "red";
