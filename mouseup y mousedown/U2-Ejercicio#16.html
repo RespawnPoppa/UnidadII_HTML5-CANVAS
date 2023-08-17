@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mousemove</title>
+    <title>mouseup y mousedown</title>
     <style>
         canvas{
             background-color: white;
@@ -27,12 +27,14 @@
     <canvas id="myCanvas" width="700" height="700"></canvas>
 
     <script>
-        var canvas = document.getElementById("myCanvas")
-        var ctx = canvas.getContext('2d')
-        var fig = true;
-       var circleColor = "#FF5733"; 
+  var canvas = document.getElementById("myCanvas");
+  var ctx = canvas.getContext("2d");
+  var isDrawing = false; 
+  var fig = true; 
+  var circleColor = "#FF5733"; 
 
-  canvas.addEventListener("mousedown", (e) => {
+  canvas.addEventListener("mousedown", function(e) {
+    isDrawing = true;
     ctx.fillStyle = fig ? circleColor : getRandomColor();
     if (fig) {
       ctx.beginPath();
@@ -41,21 +43,35 @@
     } else {
       ctx.fillRect(e.layerX - 25, e.layerY - 25, 50, 50);
     }
-
-    console.log(e)
-    console.log("mousedown")
   });
 
-  canvas.addEventListener("mouseover", (e) => {
+  canvas.addEventListener("mouseup", function() {
+    isDrawing = false;
+  });
+
+  canvas.addEventListener("mousemove", function(event) {
+    if (isDrawing) {
+      ctx.fillStyle = fig ? "black" : "black";
+      if (fig) {
+        ctx.beginPath();
+        ctx.arc(event.layerX, event.layerY, 2, 0, 2 * Math.PI);
+        ctx.fill();
+        console.log("Se esta activando ciruclo puntito negro")
+      } else {
+        ctx.beginPath();
+        ctx.arc(event.layerX, event.layerY, 2, 0, 2 * Math.PI);
+        ctx.fill();
+        
+      }
+    }
+  });
+
+  canvas.addEventListener("mouseover", function() {
     circleColor = getRandomColor();
-    console.log(e)
-    console.log("mouseover")
   });
 
-  canvas.addEventListener("mouseout", (e) => {
-    fig = !fig; 
-    console.log(e)
-    console.log("mouseout")
+  canvas.addEventListener("mouseout", function() {
+    fig = !fig;
   });
 
   function getRandomColor() {
@@ -66,13 +82,7 @@
     }
     return color;
   }
-  
-  canvas.addEventListener("mousemove", (event) => {
-            ctx.beginPath();
-                ctx.fillStyle = "red";
-                ctx.arc(event.layerX - 12, event.layerY - 12, 2, 0, 2 * Math.PI);
-                ctx.fill();
-        });
+
 </script>
 </body>
 </html>
