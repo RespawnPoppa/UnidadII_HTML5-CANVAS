@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            background-color: white;
+            border-color: black;
+            border-style:solid;
+        }
+
+        body{
+          background-color: black;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <!-- Jose Manuel Benitez Perez 
+    Ingeniero en Desarrollo de Software
+    Programación Avanzada Internet
+    Semestre VII, T.V
+    -->
+    <canvas id="myCanvas" width="700" height="700"></canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas")
+        var ctx = canvas.getContext('2d')
+        var fig = true;
+        var circleColor = "#FF5733"; 
+
+  canvas.addEventListener("mousedown", (e) => {
+    ctx.fillStyle = fig ? circleColor : getRandomColor();
+    if (fig) {
+      ctx.beginPath();
+      ctx.arc(e.layerX, e.layerY, 25, 0, 2 * Math.PI);
+      ctx.fill();
+    } else {
+      ctx.fillRect(e.layerX - 25, e.layerY - 25, 50, 50);
+    }
+
+    console.log(e)
+    console.log("mousedown")
+  });
+
+  canvas.addEventListener("mouseover", (e) => {
+    circleColor = getRandomColor();
+    console.log(e)
+    console.log("mouseover")
+  });
+
+  canvas.addEventListener("mouseout", (e) => {
+    fig = !fig; 
+    console.log(e)
+    console.log("mouseout")
+  });
+
+  function getRandomColor() {
+    var letters = "0123456789ABCDEF";
+    var color = "#";
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+</script>
+</body>
+</html>
+</script>
+</body>
+</html>

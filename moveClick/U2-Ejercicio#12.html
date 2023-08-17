@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            background-color: white;
+            border-color: black;
+            border-style:solid;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Jose Manuel Benitez Perez 
+    Ingeniero en Desarrollo de Software
+    Programación Avanzada Internet
+    Semestre VII, T.V
+    -->
+    <canvas id="myCanvas" width="700" height="700"></canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas")
+        var ctx = canvas.getContext('2d')
+        // //Cuadrado I
+        // ctx.fillStyle = "#7d88e5"
+        // ctx.fillRect(20,20,80,80);
+
+    canvas.addEventListener("mousedown", (e) => {
+    console.log("mousedown")
+    console.log(e)
+    ctx.fillStyle = "#FF5733"
+    ctx.fillRect(e.layerX-32,e.layerY-32,50,50);
+});
+</script>
+</body>
+</html>
