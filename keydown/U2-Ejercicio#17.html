@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evento Mouseout</title>
+    <style>
+        canvas{
+            background-color: white;
+            border-color: black;
+            border-style:solid;
+        }
+
+        body{
+          background-color: black;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <!-- Jose Manuel Benitez Perez 
+    Ingeniero en Desarrollo de Software
+    Programación Avanzada Internet
+    Semestre VII, T.V
+    -->
+    <canvas id="myCanvas" width="700" height="700"></canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas")
+        var ctx = canvas.getContext('2d')
+       var x = 50, y= 50;
+    document.addEventListener("keydown", (e) => {
+            console.log(e);
+
+            if (e.key === "w") {
+                y -= 10;
+            }
+            if (e.key === "s") {
+                y += 10;
+            }
+            if (e.key === "a") {
+                x -= 10;
+            }
+            if (e.key === "d") {
+                x += 10;
+            }
+
+            update();
+        });
+
+        function update() {
+            ctx.fillStyle = "white";
+            ctx.fillRect(0, 0, 700, 700); 
+
+            ctx.fillStyle = getRandomColor();
+            ctx.beginPath();
+            ctx.arc(x, y, 25, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+</script>
+</body>
+</html>
+</script>
+</body>
+</html>
