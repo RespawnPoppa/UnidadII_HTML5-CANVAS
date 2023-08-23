@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi avatar</title>
+    <style>
+        canvas{
+            background-color: white;
+            border-color: black;
+            border-style:solid;
+        }
+
+        body{
+          background-color: black;
+        }
+    </style>
+    
+</head>
+<body>
+    <img src="/avatar/LetrasLogo.png" id="Imagen" style="display: none;" alt="" >
+    <!-- Jose Manuel Benitez Perez 
+    Ingeniero en Desarrollo de Software
+    Programación Avanzada Internet
+    Semestre VII, T.V
+    -->
+    <canvas id="myCanvas" width="700" height="700"></canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas")
+        var ctx = canvas.getContext('2d')
+        ctx.fillStyle = "#00a1e9"; // Puedes usar cualquier color en formato CSS
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        var imagen = new Image();
+         imagen.src = "letrasLogo.png";
+
+         imagen.onload = function() {
+         ctx.drawImage(imagen, 305, 480, 350, 160);
+        };
+
+        ctx.fillStyle = "#fcbdd3"; 
+            ctx.beginPath();
+            ctx.ellipse(450, 300, 60, 43, 0, 0, 2 * Math.PI);
+            ctx.fill();
+     
+            ctx.fillStyle = "#fcbdd3"; 
+            ctx.beginPath();
+            ctx.ellipse(450, 300, 60, 43, 0, 0, 2 * Math.PI);
+             ctx.fill();
+
+            ctx.fillStyle = "#fcbdd3";
+            ctx.beginPath();
+            ctx.arc(160, 210, 50, 20.1, Math.PI * 4);
+            ctx.fill();
+
+
+            ctx.fillStyle = "#e75365"; // Los pies
+            ctx.beginPath();
+            ctx.ellipse(400, 410, 60, 55, 0, 0, 2 * Math.PI);
+            ctx.ellipse(210, 410, 60, 55, 0, 0, 2 * Math.PI);
+            ctx.fill();
+
+            ctx.fillStyle = "#fcbdd3"; // Cuerpo rosa
+            ctx.beginPath();
+            ctx.arc(300, 300, 130, 0, Math.PI * 2);
+            ctx.fill();
+
+            //Los ojos grande negros
+            ctx.fillStyle = "black"; // Color rosa
+            ctx.beginPath();
+            ctx.ellipse(268, 278, 20, 50, 0, 0, Math.PI * 2);
+            ctx.ellipse(340, 278, 20, 50, 0, 0, Math.PI * 2);
+            ctx.fill();
+
+            //Los ojos brillos
+            ctx.fillStyle = "white"
+            ctx.beginPath();
+            ctx.ellipse(268, 258, 13, 23, 0, 0, Math.PI * 2);
+            ctx.ellipse(340, 258, 13, 23, 0, 0, Math.PI * 2);
+            ctx.fill();
+
+
+            // Dibujar la mitad inferior del óvalo
+            ctx.fillStyle = "blue"; // Color rosa
+            ctx.beginPath();
+            ctx.ellipse(268, 288, 16, 37, 0, 0, Math.PI);
+            ctx.ellipse(340, 288, 16, 37, 0, 0, Math.PI);
+            ctx.fill();
+
+            //La boca feliz
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = 4;
+            ctx.beginPath();
+            ctx.arc(303, 316, 28, 0.2 * Math.PI, 0.8 * Math.PI, false);
+            ctx.stroke();
+
+            ctx.fillStyle = "#f987be"; 
+            ctx.beginPath();
+            ctx.ellipse(223, 327, 23, 15, 0, 0, 2 * Math.PI);
+            ctx.ellipse(387, 327, 23, 15, 0, 0, 2 * Math.PI);
+            ctx.fill();
+
+       
+            ctx.font = "20px Kirby Classic"; 
+        ctx.fillStyle = "#EBE808" ; 
+        ctx.strokeStyle = "blue"; 
+        ctx.strokeText("by Jose Manuel Benitez Perez", 50, 670);
+        ctx.fillText("by Jose Manuel Benitez Perez", 50, 670);
+     
+
+        canvas.addEventListener("mousedown", function(event) {
+            var x = event.layerX;
+            var y = event.layerY;
+            console.log("Coordenadas x:", x, "y:", y);
+        });
+        
+</script>
+</body>
+</html>
+</script>
+</body>
+</html>
