@@ -29,7 +29,7 @@
     <script>
         var canvas = document.getElementById("myCanvas")
         var ctx = canvas.getContext('2d')
-        ctx.fillStyle = "#00a1e9"; // Puedes usar cualquier color en formato CSS
+        ctx.fillStyle = "#00a1e9"; 
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         var imagen = new Image();
@@ -82,7 +82,7 @@
 
 
             // Dibujar la mitad inferior del óvalo
-            ctx.fillStyle = "blue"; // Color rosa
+            ctx.fillStyle = "blue"; 
             ctx.beginPath();
             ctx.ellipse(268, 288, 16, 37, 0, 0, Math.PI);
             ctx.ellipse(340, 288, 16, 37, 0, 0, Math.PI);
@@ -102,7 +102,7 @@
             ctx.fill();
 
        
-            ctx.font = "20px Kirby Classic"; 
+        ctx.font = "20px Kirby Classic"; 
         ctx.fillStyle = "#EBE808" ; 
         ctx.strokeStyle = "blue"; 
         ctx.strokeText("by Jose Manuel Benitez Perez", 50, 670);

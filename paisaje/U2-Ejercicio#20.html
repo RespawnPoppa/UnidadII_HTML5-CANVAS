@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paisaje</title>
+    <style>
+       canvas{
+            background-color: white;
+            border-color: black;
+            border-style:solid;
+        }
+
+        body{
+          background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Jose Manuel Benitez Perez 
+    Ingeniero en Desarrollo de Software
+    Programación Avanzada Internet
+    Semestre VII, T.V
+    -->
+    <canvas id="myCanvas" width="700" height="700"></canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas")
+        var ctx = canvas.getContext('2d')
+
+        ctx.fillStyle = "#00a1e9"; 
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Los pisos
+        ctx.fillStyle = "#834114"; 
+        ctx.fillRect(0, 635, 700, 65); 
+        
+        ctx.fillStyle = "#D46A21"; 
+        ctx.fillRect(0, 600, 700, 65); 
+        ctx.fillStyle = "#34D421";
+        ctx.fillRect(0, 585, 700, 40); 
+
+        // Parte de la casa
+        ctx.fillStyle = "#EFE6DB"
+        ctx.fillRect(180,305,442,280);
+
+        ctx.fillStyle = "#FFF8F0"
+        ctx.fillRect(190,305,420,280);
+
+     
+        ctx.fillStyle = "#523613";
+        ctx.fillRect(148, 265, 500, 40); 
+
+        //Puerta
+
+        ctx.fillStyle = "#975D14";
+        ctx.fillRect(350, 416, 120, 170); 
+        
+        ctx.fillStyle = "#523613";
+        ctx.fillRect(360, 426, 100, 160); 
+
+        ctx.fillStyle = "#EDB073";
+        ctx.fillRect(368, 446, 37, 78); 
+
+        ctx.fillStyle = "#EDB073";
+        ctx.fillRect(416, 446, 37, 78); 
+        
+        ctx.beginPath();
+        ctx.arc(448, 538, 8, 3 , 5 * Math.PI);
+        ctx.fillStyle = "yellow"
+        ctx.fill();
+     
+        // Ventanas
+
+        //Ventana Derecha
+        ctx.fillStyle = "#523613"; 
+        ctx.fillRect(492, 360, 100, 160);
+
+        ctx.fillStyle = "#654116";
+        ctx.fillRect(482, 517, 122, 15); 
+
+        ctx.fillStyle = "#28D4F9"; 
+        ctx.fillRect(500, 380, 40, 124);
+
+        ctx.fillStyle = "#28D4F9"; 
+        ctx.fillRect(545, 380, 40, 124);
+
+    //ventana Izquierda
+        ctx.fillStyle = "#523613"; 
+        ctx.fillRect(220, 360, 100, 160);
+
+        ctx.fillStyle = "#654116";
+        ctx.fillRect(209, 517, 122, 15); 
+
+        ctx.fillStyle = "#28D4F9"; 
+        ctx.fillRect(227, 380, 40, 124);
+
+        ctx.fillStyle = "#28D4F9"; 
+        ctx.fillRect(273, 380, 40, 124);
+
+     // Tinaco
+         ctx.fillStyle = "black"; 
+        ctx.fillRect(500, 180, 100, 85);
+
+        ctx.fillStyle = "black"; 
+        ctx.fillRect(516, 160, 68, 20);
+
+        // Patio
+        ctx.beginPath();
+        ctx.arc(146, 550, 34, 3 , 5 * Math.PI);
+        ctx.fillStyle = "#52F111"
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(146, 480, 34, 3 , 5 * Math.PI);
+        ctx.fillStyle = "#52F111"
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(100, 480, 34, 3 , 5 * Math.PI);
+        ctx.fillStyle = "#52F111"
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(100, 550, 34, 3 , 5 * Math.PI);
+        ctx.fillStyle = "#52F111"
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(60, 550, 34, 3 , 5 * Math.PI);
+        ctx.fillStyle = "#52F111"
+        ctx.fill();
+        
+        ctx.beginPath();
+        ctx.arc(60, 480, 34, 3 , 5 * Math.PI);
+        ctx.fillStyle = "#52F111"
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(30, 480, 34, 3 , 5 * Math.PI);
+        ctx.fillStyle = "#52F111"
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(30, 550, 34, 3 , 5 * Math.PI);
+        ctx.fillStyle = "#52F111"
+        ctx.fill();
+
+        ctx.fillStyle = "#BE722D"
+        ctx.fillRect(0,496,179,50);
+
+        ctx.fillStyle = "#FAB16F"
+        ctx.fillRect(19,465,35,120);
+    
+        ctx.fillStyle = "#FAB16F"; // Color de relleno
+        ctx.beginPath();
+        ctx.ellipse(36, 465, 17, 30, 0, Math.PI, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = "#FAB16F"
+        ctx.fillRect(66,465,35,120);
+
+        ctx.fillStyle = "#FAB16F"; 
+        ctx.beginPath();
+        ctx.ellipse(83, 465, 17, 30, 0, Math.PI, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = "#FAB16F"
+        ctx.fillRect(115,465,35,120);
+
+        ctx.fillStyle = "#FAB16F"; 
+        ctx.beginPath();
+        ctx.ellipse(132, 465, 17, 30, 0, Math.PI, Math.PI * 2);
+        ctx.fill();
+
+      //Sol
+      ctx.beginPath();
+        ctx.arc(100, 100, 45, 3 , 5 * Math.PI);
+        ctx.fillStyle = "yellow"
+        ctx.fill();
+
+        //Nubes
+        ctx.beginPath();
+        ctx.arc(470, 130, 23, 3 , 5 * Math.PI);
+        ctx.fillStyle = "white"
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(435, 130, 23, 3 , 5 * Math.PI);
+        ctx.fillStyle = "white"
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(410, 130, 23, 3 , 5 * Math.PI);
+        ctx.fillStyle = "white"
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(394, 90, 23, 3 , 5 * Math.PI);
+        ctx.fillStyle = "white"
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(423, 90, 23, 3 , 5 * Math.PI);
+        ctx.fillStyle = "white"
+        ctx.fill();
+        
+        ctx.beginPath();
+        ctx.arc(456, 95, 23, 3 , 5 * Math.PI);
+        ctx.fillStyle = "white"
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(380, 130, 23, 3 , 5 * Math.PI);
+        ctx.fillStyle = "white"
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(360, 95, 23, 3 , 5 * Math.PI);
+        ctx.fillStyle = "white"
+        ctx.fill();
+
+        //Arbol
+        ctx.fillStyle = "#BE722D"
+        ctx.fillRect(645,385,50,200);
+
+        ctx.beginPath();
+        ctx.arc(670, 360, 60, 3 , 5 * Math.PI);
+        ctx.fillStyle = "#52F111"
+        ctx.fill();
+
+        ctx.fillStyle = "white"
+        ctx.fillRect(520,205,59,20);
+
+
+
+</script>
+</body>
+</html>
