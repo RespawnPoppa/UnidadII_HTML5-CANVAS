@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Bros</title>
+    <style>
+       canvas{
+            background-color: white;
+            border-color: black;
+            border-style:solid;
+        }
+
+        body{
+          background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Jose Manuel Benitez Perez 
+    Ingeniero en Desarrollo de Software
+    Programación Avanzada Internet
+    Semestre VII, T.V
+    -->
+    <canvas id="myCanvas" width="1000" height="600"></canvas>
+
+    <script>
+
+        var canvas = document.getElementById("myCanvas")
+        var ctx = canvas.getContext('2d')
+        //Color de cielo
+        ctx.fillStyle = "#a2f0ff"; 
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+//Rectangulo
+var x = 410;
+  var y = 250;
+  var width = 200;
+  var height = 280;
+  var borderRadius = 20;
+  var borderWidth = 6;
+
+  ctx.fillStyle = "black"; 
+  ctx.strokeStyle = "black"; 
+  ctx.lineWidth = borderWidth; 
+
+  function drawRoundedRectangle(x, y, width, height, borderRadius, borderWidth) {
+    ctx.beginPath();
+    ctx.moveTo(x + borderRadius, y);
+    ctx.lineTo(x + width - borderRadius, y);
+    ctx.arcTo(x + width, y, x + width, y + borderRadius, borderRadius);
+    ctx.lineTo(x + width, y + height);
+    ctx.lineTo(x, y + height - borderWidth); 
+    ctx.lineTo(x, y + borderRadius);
+    ctx.arcTo(x, y, x + borderRadius, y, borderRadius);
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+  }
+  drawRoundedRectangle(x, y, width, height, borderRadius, borderWidth);
+
+  
+//Rectangulo
+  var x = 380;
+  var y = 210;
+  var width = 200;
+  var height = 330;
+  var borderRadius = 20;
+  var borderWidth = 6;
+
+  ctx.fillStyle = "#0094e5"; 
+  ctx.strokeStyle = "black"; 
+  ctx.lineWidth = borderWidth; 
+
+  function rectangulo(x, y, width, height, borderRadius, borderWidth) {
+    ctx.beginPath();
+    ctx.moveTo(x + borderRadius, y);
+    ctx.lineTo(x + width - borderRadius, y);
+    ctx.arcTo(x + width, y, x + width, y + borderRadius, borderRadius);
+    ctx.lineTo(x + width, y + height);
+    ctx.lineTo(x, y + height - borderWidth); 
+    ctx.lineTo(x, y + borderRadius);
+    ctx.arcTo(x, y, x + borderRadius, y, borderRadius);
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+  }
+  rectangulo(x, y, width, height, borderRadius, borderWidth);
+
+  //Color sobre del rectangulo
+  var x = 383;
+  var y = 215;
+  var width = 183;
+  var height = 300;
+  var borderRadius = 20;
+
+  var fillColor = "#71c2ff"; 
+  var borderWidth = 6; 
+  var borderColor = "#71c2ff"; 
+
+  function sobreRectangulo(x, y, width, height, borderRadius, borderWidth, fillColor, borderColor) {
+    ctx.fillStyle = fillColor;
+    ctx.strokeStyle = borderColor; 
+    ctx.lineWidth = borderWidth;
+
+    ctx.beginPath();
+    ctx.moveTo(x + borderRadius, y);
+    ctx.lineTo(x + width - borderRadius, y);
+    ctx.arcTo(x + width, y, x + width, y + borderRadius, borderRadius);
+    ctx.lineTo(x + width, y + height);
+    ctx.lineTo(x, y + height); 
+    ctx.lineTo(x, y + borderRadius); 
+    ctx.arcTo(x, y, x + borderRadius, y, borderRadius);
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+  }
+  sobreRectangulo(x, y, width, height, borderRadius, borderWidth, fillColor, borderColor);
+  
+      //Piso
+      ctx.fillStyle = "#ff9766" 
+        ctx.fillRect(0,550,1000,50)
+
+        ctx.fillStyle = "#5f2818" 
+        ctx.fillRect(0,548,1000,8)
+
+        ctx.fillStyle = "#ffc9bd" 
+        ctx.fillRect(0,531,1000,17)
+
+        ctx.fillStyle = "black" 
+        ctx.fillRect(0,526,1000,5)
+
+
+// Cuadros de bordes I
+    var x = 299;
+    var y = 349;
+    var size = 177;
+    var borderRadius = 20;
+    var borderWidth = 6; 
+
+ctx.fillStyle = "black"; 
+ctx.strokeStyle = "black"; 
+ctx.lineWidth = borderWidth; 
+
+ctx.beginPath();
+ctx.moveTo(x + borderRadius, y);
+ctx.lineTo(x + size - borderRadius, y);
+ctx.arcTo(x + size, y, x + size, y + borderRadius, borderRadius);
+ctx.lineTo(x + size, y + size - borderRadius);
+ctx.arcTo(x + size, y + size, x + size - borderRadius, y + size, borderRadius);
+ctx.lineTo(x + borderRadius, y + size);
+ctx.arcTo(x, y + size, x, y + size - borderRadius, borderRadius);
+ctx.lineTo(x, y + borderRadius);
+ctx.arcTo(x, y, x + borderRadius, y, borderRadius);
+ctx.closePath();
+ctx.fill();
+ctx.stroke();
+
+    var x = 250;
+    var y = 330;
+    var size = 200;
+    var borderRadius = 20;
+    var borderWidth = 6; 
+
+ctx.fillStyle = "#eb9472"; 
+ctx.strokeStyle = "black"; 
+ctx.lineWidth = borderWidth; 
+
+ctx.beginPath();
+ctx.moveTo(x + borderRadius, y);
+ctx.lineTo(x + size - borderRadius, y);
+ctx.arcTo(x + size, y, x + size, y + borderRadius, borderRadius);
+ctx.lineTo(x + size, y + size - borderRadius);
+ctx.arcTo(x + size, y + size, x + size - borderRadius, y + size, borderRadius);
+ctx.lineTo(x + borderRadius, y + size);
+ctx.arcTo(x, y + size, x, y + size - borderRadius, borderRadius);
+ctx.lineTo(x, y + borderRadius);
+ctx.arcTo(x, y, x + borderRadius, y, borderRadius);
+ctx.closePath();
+ctx.fill();
+ctx.stroke();
+
+ctx.fillStyle = "#ffc0b5"; 
+ctx.fillRect( 253, 330 , 187, 190);
+
+//Rectangulo en el piso
+var x = 878;
+  var y = 328;
+  var width = 300;
+  var height = 200;
+  var borderRadius = 20;
+  var borderWidth = 8;
+
+  ctx.fillStyle = "#0a601f"; 
+  ctx.strokeStyle = "black"; 
+  ctx.lineWidth = borderWidth; 
+
+  function rectanguloCuatroBordes(x, y, width, height, borderRadius, borderWidth) {
+    ctx.beginPath();
+    ctx.moveTo(x + borderRadius, y); 
+    ctx.lineTo(x + width - borderRadius, y); 
+    ctx.arcTo(x + width, y, x + width, y + borderRadius, borderRadius); 
+    ctx.lineTo(x + width, y + height - borderRadius);
+    ctx.arcTo(x + width, y + height, x + width - borderRadius, y + height, borderRadius);
+    ctx.lineTo(x + borderRadius, y + height); 
+    ctx.arcTo(x, y + height, x, y + height - borderRadius, borderRadius);
+    ctx.lineTo(x, y + borderRadius); 
+    ctx.arcTo(x, y, x + borderRadius, y, borderRadius); 
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+  }
+rectanguloCuatroBordes(x, y, width, height, borderRadius, borderWidth);
+
+  var x = 878;
+  var y = 328;
+  var width = 300;
+  var height = 195;
+  var borderRadius = 20;
+  
+  ctx.fillStyle = "#00dd5b"; 
+
+  function rectanguloCuatroBordesII(x, y, width, height, borderRadius) {
+    ctx.beginPath();
+    ctx.moveTo(x + borderRadius, y); 
+    ctx.lineTo(x + width - borderRadius, y); 
+    ctx.arcTo(x + width, y, x + width, y + borderRadius, borderRadius); 
+    ctx.lineTo(x + width, y + height - borderRadius);
+    ctx.arcTo(x + width, y + height, x + width - borderRadius, y + height, borderRadius); 
+    ctx.lineTo(x + borderRadius, y + height); 
+    ctx.arcTo(x, y + height, x, y + height - borderRadius, borderRadius); 
+    ctx.lineTo(x, y + borderRadius); 
+    ctx.arcTo(x, y, x + borderRadius, y, borderRadius); 
+    ctx.fill();
+    ctx.closePath();
+  }
+  rectanguloCuatroBordesII(x, y, width, height, borderRadius);
+
+//Bloques
+ctx.fillStyle = "#ff8752"
+ctx.fillRect(182,65,65,65);
+ctx.lineWidth = 5;
+ctx.strokeRect(182,65,65,65)
+
+
+ctx.fillStyle = "#ff8752"
+ctx.fillRect(249,65,65,65);
+ctx.lineWidth = 5;
+ctx.strokeRect(249,65,65,65)
+
+
+ctx.fillStyle = "#ff8752"
+ctx.fillRect(45,240,65,65);
+ctx.lineWidth = 5;
+ctx.strokeRect(45,240,65,65)
+
+
+ctx.fillStyle = "black"
+ctx.fillRect(190,72,5,5)
+
+ctx.fillStyle = "black"
+ctx.fillRect(235,72,5,5)
+
+ctx.fillStyle = "black"
+ctx.fillRect(235,118,5,5)
+
+ctx.fillStyle = "black"
+ctx.fillRect(257,72,5,5)
+
+ctx.fillStyle = "black"
+ctx.fillRect(257,118,5,5)
+
+ctx.fillStyle = "black"
+ctx.fillRect(300,118,5,5)
+
+ctx.fillStyle = "black"
+ctx.fillRect(300,72,5,5)
+
+ctx.fillStyle = "black"
+ctx.fillRect(190,118,5,5)
+
+ctx.fillStyle = "black"
+ctx.fillRect(53,250,5,5)
+
+ctx.fillStyle = "black"
+ctx.fillRect(97,250,5,5)
+
+
+ctx.fillStyle = "black"
+ctx.fillRect(97,293,5,5)
+
+ctx.fillStyle = "black"
+ctx.fillRect(53,293,5,5)
+
+ctx.fillStyle = "#ff8752"
+ctx.fillRect(920,140,65,65);
+ctx.lineWidth = 5;
+ctx.strokeRect(920,140,65,65)
+
+ctx.fillStyle = "black"
+ctx.fillRect(929,150,5,5)
+
+ctx.fillStyle = "black"
+ctx.fillRect(972,150,5,5)
+
+ctx.fillStyle = "black"
+ctx.fillRect(972,193,5,5)
+
+ctx.fillStyle = "black"
+ctx.fillRect(929,193,5,5)
+
+//Tuberia
+ctx.fillStyle = "#008a00"
+ctx.fillRect(685,406,110,120)
+ctx.strokeRect(685,406,110,120)
+
+ctx.fillStyle = "#00e455"
+ctx.fillRect(692,409,4,114)
+
+ctx.fillStyle = "#00e455"
+ctx.fillRect(703,409,10,114)
+
+ctx.fillStyle = "#00e455"
+ctx.fillRect(720,409,3,114)
+
+ctx.fillStyle = "#00e455"
+ctx.fillRect(748,409,5,114)
+
+ctx.fillStyle = "#001d00"
+ctx.fillRect(754,409,5,114)
+
+ctx.fillStyle = "#285334"
+ctx.fillRect(759,409,5,114)
+
+ctx.fillStyle = "#001d00"
+ctx.fillRect(764,409,5,114)
+
+ctx.fillStyle = "#285334"
+ctx.fillRect(769,409,3,114)
+
+ctx.fillStyle = "#001d00"
+ctx.fillRect(773,409,10,114)
+
+ctx.fillStyle = "#001d00"
+ctx.fillRect(784,409,8,114)
+
+//Parte inferior tuberia
+ctx.fillStyle = "black"
+ctx.fillRect(676,395,127,10);
+
+ctx.fillStyle = "#008a00"
+ctx.fillRect(678,350,123,50)
+ctx.strokeRect(678,350,123,50)
+
+ctx.fillStyle = "#00e455"
+ctx.fillRect(692,352,3,45)
+
+ctx.fillStyle = "#00e455"
+ctx.fillRect(703,352,10,45)
+
+ctx.fillStyle = "#00e455"
+ctx.fillRect(720,352,3,45)
+
+ctx.fillStyle = "#00e455"
+ctx.fillRect(748,352,5,45)
+
+ctx.fillStyle = "#001d00"
+ctx.fillRect(754,352,5,45)
+
+ctx.fillStyle = "#285334"
+ctx.fillRect(759,352,5,45)
+
+ctx.fillStyle = "#001d00"
+ctx.fillRect(764,352,5,45)
+
+ctx.fillStyle = "#285334"
+ctx.fillRect(769,352,3,45)
+
+ctx.fillStyle = "#001d00"
+ctx.fillRect(773,352,10,45)
+
+ctx.fillStyle = "#001d00"
+ctx.fillRect(784,352,13,45)
+
+//Tornillos
+
+ctx.fillStyle = "#bdcbcd"; // Cambiar el color a rojo
+ctx.beginPath();
+ctx.arc(277, 354, 10, 0, 2 * Math.PI); // Coordenadas x, y del centro; radio; ángulo inicial y final (círculo completo)
+ctx.fill();
+ctx.closePath();
+
+
+ctx.fillStyle = "#bdcbcd"; // Cambiar el color a rojo
+ctx.beginPath();
+ctx.arc(277, 503, 10, 0, 2 * Math.PI); // Coordenadas x, y del centro; radio; ángulo inicial y final (círculo completo)
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+var centerX = 277; 
+  var centerY = 354; 
+  var radius = 12; 
+  var borderWidth = 5; 
+
+  ctx.strokeStyle = "black"; // Color del borde
+  ctx.lineWidth = borderWidth; // Grosor del borde
+
+
+  ctx.beginPath();
+  ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI); // Crear un arco completo (círculo)
+  ctx.stroke();
+  ctx.closePath();
+  var centerX = 277; 
+  var centerY = 503; 
+  var radius = 12; 
+  var borderWidth = 5; 
+  ctx.strokeStyle = "black"; 
+  ctx.lineWidth = borderWidth; 
+  ctx.beginPath();
+  ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI); 
+  ctx.stroke();
+  ctx.closePath();
+
+//  
+ctx.fillStyle = "#bdcbcd"; // Cambiar el color a rojo
+ctx.beginPath();
+ctx.arc(277, 354, 10, 0, 2 * Math.PI); // Coordenadas x, y del centro; radio; ángulo inicial y final (círculo completo)
+ctx.fill();
+ctx.closePath();
+
+//
+ctx.fillStyle = "#bdcbcd"; // Cambiar el color a rojo
+ctx.beginPath();
+ctx.arc(422, 354, 10, 0, 2 * Math.PI); // Coordenadas x, y del centro; radio; ángulo inicial y final (círculo completo)
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+
+  var centerX = 422; 
+  var centerY = 354; 
+  var radius = 12; 
+  var borderWidth = 5; 
+
+  ctx.strokeStyle = "black"; 
+  ctx.lineWidth = borderWidth; 
+
+ 
+  ctx.beginPath();
+  ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI); 
+  ctx.stroke();
+  ctx.closePath();
+
+
+ctx.fillStyle = "#bdcbcd"; 
+ctx.beginPath();
+ctx.arc(422, 503, 10, 0, 2 * Math.PI); 
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+var centerX = 422; 
+var centerY = 503; 
+var radius = 12; 
+var borderWidth = 5; 
+ctx.strokeStyle = "black"; 
+ctx.lineWidth = borderWidth; 
+ctx.beginPath();
+ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI); 
+ctx.stroke();
+ctx.closePath();
+
+
+ctx.fillStyle = "#bdcbcd"; 
+ctx.beginPath();
+ctx.arc(556, 234, 10, 0, 2 * Math.PI); 
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+var centerX = 556; 
+var centerY = 234; 
+var radius = 12; 
+var borderWidth = 5; 
+ctx.strokeStyle = "black"; 
+ctx.lineWidth = borderWidth; 
+ctx.beginPath();
+ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI); 
+ctx.stroke();
+ctx.closePath();
+
+ctx.fillStyle = "#bdcbcd"; 
+ctx.beginPath();
+ctx.arc(557,508, 10, 0, 2 * Math.PI); 
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+var centerX = 557; 
+var centerY = 508; 
+var radius = 12; 
+var borderWidth = 5; 
+ctx.strokeStyle = "black"; 
+ctx.lineWidth = borderWidth; 
+ctx.beginPath();
+ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI); 
+ctx.stroke();
+ctx.closePath();
+
+ctx.fillStyle = "#bdcbcd"; 
+ctx.beginPath();
+ctx.arc(406, 234, 10, 0, 2 * Math.PI); 
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+var centerX = 406; 
+var centerY = 234; 
+var radius = 12; 
+var borderWidth = 5; 
+ctx.strokeStyle = "black"; 
+ctx.lineWidth = borderWidth; 
+ctx.beginPath();
+ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI); 
+ctx.stroke();
+ctx.closePath();
+
+ctx.fillStyle = "#bdcbcd"; 
+ctx.beginPath();
+ctx.arc(900,508, 10, 0, 2 * Math.PI); 
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+var centerX = 900; 
+var centerY = 508; 
+var radius = 12; 
+var borderWidth = 5; 
+ctx.strokeStyle = "black"; 
+ctx.lineWidth = borderWidth; 
+ctx.beginPath();
+ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI); 
+ctx.stroke();
+ctx.closePath();
+
+ctx.fillStyle = "#bdcbcd"; 
+ctx.beginPath();
+ctx.arc(900,350, 10, 0, 2 * Math.PI); 
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+var centerX = 900; 
+var centerY = 350; 
+var radius = 12; 
+var borderWidth = 5; 
+ctx.strokeStyle = "black"; 
+ctx.lineWidth = borderWidth; 
+ctx.beginPath();
+ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI); 
+ctx.stroke();
+ctx.closePath();
+
+</script>
+
+
+</script>
+</body>
+</html>
