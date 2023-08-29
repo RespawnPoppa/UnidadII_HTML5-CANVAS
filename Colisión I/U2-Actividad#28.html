@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Colisión I</title>
 
     <style>
         canvas{
@@ -15,7 +15,11 @@
     </style>
 </head>
     <body>
-        
+            <!-- Jose Manuel Benitez Perez 
+    Ingeniero en Desarrollo de Software
+    Programación Avanzada Internet
+    Semestre VII, T.V
+    -->
         <center>
             <canvas width="500" height="500" id="myCanvas"></canvas>
         </center>
@@ -26,12 +30,10 @@
             var canvas = document.getElementById('myCanvas');
             var ctx = canvas.getContext('2d');
             var x = 225, y = 225, dir = 0, speed = 10;
-            // new variables
-            let canvasSize = 500;
-            let cw = 500;
-            let ch = 500;
-            let tx = 0;
-            let ty = 0;
+       
+            var canvasSize = 500;
+            var cw = 500 , ch = 500;
+            var tx = 0, ty = 0;
             var wx = 120, wy = 320;
 
             window.requestAnimationFrame = (function () {
@@ -66,22 +68,21 @@
             })
 
             function update(){ 
-                    //add 2 variables
                 if (dir == 1) {
                     y-=speed;
                     if (y+50 < 0) {
-                        y = ch+50; //550
+                        y = ch+50; 
                     }
                 }
                 if (dir == 2) {
                     y+=speed;
-                    if (y+50 > ch) { //500
+                    if (y+50 > ch) { 
                         y = -50;
                     }
                 }
                 if (dir == 3) {
                     x+=speed;
-                    if (x+50 > cw) { //500
+                    if (x+50 > cw) { 
                         x = -50;
                     }
                 }
@@ -92,44 +93,16 @@
                     }
                 } 
 
-                // first object 
-                if (
-                x < tx + 20 &&
-                x + 50 > tx &&
-                y < ty + 20 &&
-                y + 50 > ty){
-                console.log("new if")
-                
-                
+                if ( x < tx + 20 &&  y < ty + 20 && y + 50 > ty){
+                console.log("nuevo if")
                 tx = randomInteger(500);
                 ty = randomInteger(500);
             }
-
-                // second object collision
-                if (
-                x < wx + 250 && x + 50 > wx && y < wy + 20 && y + 50 > wy){
-                console.log("new if")
-                
-                if (dir == 1) {
-                    y+=speed;
-                }
-                if (dir == 2) {
-                    y-=speed;
-                }
-                if (dir == 3) {
-                    x-=speed;
-                }
-                if (dir == 4) {
-                    x+=speed;
-                } 
-            }
-
 
                 paint(); 
                 window.requestAnimationFrame(update); 
             }
 
-            //esta solo pinta
             function paint()
             {
                 ctx.fillStyle = "white";
@@ -141,16 +114,9 @@
 
                 ctx.fillStyle = "yellow";
                 ctx.fillRect(tx,ty,20,20);
-          
-
-
-                ctx.fillStyle = "red";
-                ctx.fillRect(wx,wy,250,20);
-              
-
+            
             }
             update();
-
 
             function randomRgbColor() {
                 let r = randomInteger(255);
