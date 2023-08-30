@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Bros</title>
+    <style>
+       canvas{
+            background-color: white;
+            border-color: black;
+            border-style:solid;
+        }
+
+        body{
+          background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Jose Manuel Benitez Perez 
+    Ingeniero en Desarrollo de Software
+    Programación Avanzada Internet
+    Semestre VII, T.V
+    -->
+    <canvas id="myCanvas" width="1000" height="600"></canvas>
+
+    <script>
+
+        var canvas = document.getElementById("myCanvas")
+        var ctx = canvas.getContext('2d')
+        //Color de cielo
+        ctx.fillStyle = "#2000a0"; 
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = "#c06000"
+        ctx.fillRect(0,420,1000,190)
+
+        ctx.fillStyle = ("#602000")
+        ctx.fillRect(0,550,50,50)
+
+        ctx.fillStyle = "rgba(0, 0, 0, 0.22)"; 
+        ctx.fillRect(0,419,1000,50);
+
+      
+
+function dibujarCuadradosFilaI(x, y, size) {
+  ctx.fillStyle = "#602000"; 
+  ctx.fillRect(x, 550, 50, 50); 
+
+
+  var nextX = x + size + 1;
+  
+  if (nextX + size <= 1200) {
+    dibujarCuadradosFilaI(nextX, y, size);
+  }
+}
+
+dibujarCuadradosFilaI(-5, 50, 100); 
+
+function dibujarCuadradosFilaII(x, y, size) {
+  ctx.fillStyle = "#602000"; 
+  ctx.fillRect(x,500, 50, 50);
+
+  var nextX = x + size + 1;
+  
+  if (nextX + size <= 1200) {
+    dibujarCuadradosFilaII(nextX, y, size);
+  }
+}
+
+dibujarCuadradosFilaII(45.4, 50, 100);
+
+function dibujarCuadradosFilaIII(x, y, size) {
+  ctx.fillStyle = "#602000"; 
+  ctx.fillRect(x, 451, 50, 50); 
+
+
+  var nextX = x + size + 1;
+  
+  if (nextX + size <= 1200) {
+    dibujarCuadradosFilaIII(nextX, y, size);
+  }
+}
+dibujarCuadradosFilaIII(-5, 50, 100); 
+
+function dibujarCuadradosFilaIV(x, y, size) {
+  ctx.fillStyle = "#602000"; 
+  ctx.fillRect(x,401, 50, 50);
+
+  var nextX = x + size + 1;
+  
+  if (nextX + size <= 1200) {
+    dibujarCuadradosFilaIV(nextX, y, size);
+  }
+}
+dibujarCuadradosFilaIV(45.4, 50, 100);
+
+ctx.fillStyle = ("#006000")
+ctx.fillRect(0,409,1000,32)
+
+ctx.fillStyle = ("#40a000")
+ctx.fillRect(0,390,1000,27)
+
+ctx.fillStyle = ("#80e000")
+ctx.fillRect(0,363,1000,27)
+
+// Monedas
+ctx.beginPath();
+ctx.arc(120, 305, 30, 0, 2 * Math.PI);
+ctx.fillStyle = "#2000a0"; 
+ctx.fill();
+ctx.lineWidth = 8; 
+ctx.strokeStyle = "yellow"; 
+ctx.stroke(); 
+ctx.closePath();
+
+ctx.beginPath();
+ctx.arc(280, 305, 30, 0, 2 * Math.PI);
+ctx.fillStyle = "#2000a0"; 
+ctx.fill();
+ctx.lineWidth = 8; 
+ctx.strokeStyle = "yellow"; 
+ctx.stroke(); 
+ctx.closePath();
+
+ctx.beginPath();
+ctx.arc(445, 305, 30, 0, 2 * Math.PI);
+ctx.fillStyle = "#2000a0"; 
+ctx.fill();
+ctx.lineWidth = 8; 
+ctx.strokeStyle = "yellow"; 
+ctx.stroke(); 
+ctx.closePath();
+
+ctx.fillStyle = ("#804000");
+ctx.fillRect(680,153,20,210);
+
+ctx.beginPath();
+ctx.arc(690, 140, 92, 0, 2 * Math.PI);
+ctx.fillStyle = "#80e000"; 
+ctx.fill();
+
+ctx.fillStyle = ("#804000");
+ctx.fillRect(850,293,8,70);
+
+ctx.beginPath();
+ctx.arc(853, 295,37, 0, 2 * Math.PI); 
+ctx.fillStyle = "yellow"; 
+ctx.fill(); 
+ctx.closePath();
+
+ctx.beginPath();
+ctx.arc(853, 295,20, 0, 2 * Math.PI); 
+ctx.fillStyle = "#406040"; 
+ctx.fill(); 
+ctx.closePath();
+
+
+
+</script>
+</body>
+</html>
